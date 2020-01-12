@@ -1,9 +1,9 @@
-# Draco Release Man
+# Elm Parcel
 
 ## dev
 
 ```
-$ npm run dev-start
+$ npm start
 ```
 
 ## test
