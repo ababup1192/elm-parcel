@@ -1,8 +1,8 @@
 module Main exposing (main)
 
 import Browser
-import Html exposing (Html, button, div, p, text)
-import Html.Attributes exposing (attribute)
+import Html exposing (Html, button, main_, p, text)
+import Html.Attributes exposing (class)
 import Html.Events exposing (onClick)
 
 
@@ -10,6 +10,7 @@ import Html.Events exposing (onClick)
 -- MAIN
 
 
+main : Program () Model Msg
 main =
     Browser.element
         { init = init
@@ -57,7 +58,7 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-    div []
+    main_ [ class "ly_cont" ]
         [ button [ onClick Decrement ] [ text "-" ]
         , p [] [ text <| String.fromInt model ]
         , button [ onClick Increment ] [ text "+" ]
